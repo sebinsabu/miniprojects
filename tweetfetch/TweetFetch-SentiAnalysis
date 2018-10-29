@@ -9,10 +9,10 @@ import csv
 import pandas as pd
 from textblob import TextBlob
 ####input your credentials here
-consumer_key = 'VFBEwMpMjtlV8OIA0mfucV6kY'
-consumer_secret = 'eukgnIEVhoXF2B7Z34UpDozbNoBPza97A8eimYQKX5gVij8WKc'
-access_token = '1041578973338066944-kvBimbneKmEGrXZeUralzYQB3fY4a6'
-access_token_secret = 'F5CnUDFqldUJL20n45wy9OI3OSg63dBIBcoVQA3baZKV2'
+consumer_key = 'CONSUMER KEY'
+consumer_secret = 'CONSUMER SECRET'
+access_token = 'ACCESS TOKEN'
+access_token_secret = 'ACCESS TOKEN SECRET'
 twitterhandle = 'ndtv'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
