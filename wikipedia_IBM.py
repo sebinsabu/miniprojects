@@ -17,9 +17,9 @@ dialog='I love India'
 
 
 natural_language_understanding = NaturalLanguageUnderstandingV1(
-  username='6c767224-ec65-43cb-91d3-eea204c9cc9d',
-  password='o2MQGv8WIvTm',
-  version='2018-03-16')
+  username='YOUR USERNAME HERE',
+  password='YOUR PASSWORD HERE',
+  version= 'YOUR VERSION  HERE')
 
 response = natural_language_understanding.analyze(
   text= dialog,
