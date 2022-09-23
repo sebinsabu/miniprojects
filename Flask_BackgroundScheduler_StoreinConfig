@@ -1,0 +1,36 @@
+# Flask web server which have a background scheduler and multi thread operation along with ability to store data in the config variable
+
+from flask import Flask
+from apscheduler.schedulers.background import BackgroundScheduler
+import random
+import numpy as np
+
+app = Flask(__name__)
+app.config['TESTING'] = 'True'
+globaldeclaredvariable = 'apple'
+
+def prompt():
+    # code for cron job
+    globaldeclaredvariable = 'mango'
+    new_out= random.randint(2,99)
+    app.config['TESTING'] = new_out
+    print('Hello India  -->  ',new_out)
+
+
+@app.route('/HW')
+def variablecheck():
+    globaldeclaredvariable = app.config['TESTING']
+    return str(globaldeclaredvariable)
+
+
+
+@app.route('/')
+def hello_world():
+    return 'Hello World'
+ 
+# main driver function
+if __name__ == '__main__':
+    sched = BackgroundScheduler()
+    sched.add_job(prompt,'interval', seconds=5)
+    sched.start()
+    app.run()
